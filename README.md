@@ -1,8 +1,16 @@
-# bella-website-static
+# atlas-website
 
-Bella App's marketing site — `bellaapp.au`. Static HTML + Tailwind, served by GitHub Pages.
+Atlas's marketing site. Static HTML + Tailwind, served by GitHub Pages.
 
-The companion API (contact form + Android waitlist) lives in a separate repo: [bella-api](https://github.com/elysee-dubois/bella-api), deployed to Vercel at `https://bella-website-api-bella-app.vercel.app`.
+> Scaffolded from [`bella-website-static`](https://github.com/elysee-dubois/bella-website-static) on 2026-06-01. Page content still carries Bella copy and branding — rebrand pass pending.
+
+## Conventions
+
+Follow the standards in [`bella-team-files`](https://github.com/elysee-dubois/bella-team-files):
+
+- `CODING_PRACTICES.md`
+- `DESIGN.md`
+- `NEW_PROJECT_BEST_PRACTICES.md`
 
 ## Local dev
 
@@ -11,13 +19,7 @@ npm install      # first time
 npm run dev      # http://localhost:5173 with live-reload + Tailwind watch
 ```
 
-You'll also want the API running locally:
-```
-cd ../api        # or wherever you cloned bella-api
-npm run dev      # listens on :8787
-```
-
-The site auto-detects localhost and posts forms to the dev API. See [`assets/js/config.js`](assets/js/config.js).
+If/when an Atlas API exists, the site auto-detects localhost via [`assets/js/config.js`](assets/js/config.js) — update endpoints there.
 
 ## Build
 
@@ -39,19 +41,20 @@ site/
 │   ├── js/               # vanilla JS (config, nav, reveal, faq, forms, etc.)
 │   └── img/              # images
 ├── build.mjs             # tiny Node builder: pages + partials → root HTML
-├── CNAME                 # bellaapp.au — required by Pages custom domain
 ├── .nojekyll             # tells Pages to skip Jekyll
 ├── sitemap.xml
 ├── robots.txt
 └── (built output: index.html, business/index.html, blog/, etc.)
 ```
 
+> A `CNAME` file is **not** committed yet — add one once Atlas has a custom domain. Do not reuse `bellaapp.au`.
+
 ## Editing pages
 
 Each file in `pages/` starts with a metadata directive:
 
 ```html
-<!-- meta title: Contact | description: ... | path: /contact | active: contact | audience: consumer -->
+<!-- meta title: ... | description: ... | path: /... | active: ... | audience: consumer -->
 {{> layout-start}}
 ... page body ...
 {{> layout-end}}
@@ -68,4 +71,4 @@ Available `{{> partial}}` includes: `layout-start`, `layout-end`, `head`, `nav`,
 
 ## Deployment
 
-Pushing to `main` is the deploy — GitHub Pages serves whatever's at the root of `main`. The `CNAME` and `.nojekyll` files are already configured.
+Pushing to `main` is the deploy — GitHub Pages serves whatever's at the root of `main`. Add a `CNAME` file with the Atlas domain when one is allocated, and keep `.nojekyll` in place.

@@ -1,8 +1,8 @@
 {
-  "name": "bella-website",
-  "version": "1.0.0",
+  "name": "atlas-website",
+  "version": "0.1.0",
   "private": true,
-  "description": "Bella marketing site — static HTML + Tailwind, served by GitHub Pages.",
+  "description": "Atlas marketing site — static HTML + Tailwind, served by GitHub Pages.",
   "type": "module",
   "scripts": {
     "build:html": "node build.mjs",
