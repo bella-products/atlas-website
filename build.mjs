@@ -22,12 +22,12 @@ const PARTIALS_DIR = join(__dirname, "partials");
 const OUT_DIR = __dirname; // emit at project root for GitHub Pages
 
 const SITE = {
-  name: "Bella App",
-  defaultTitle: "Bella App - Beauty with friends",
+  name: "Atlas",
+  defaultTitle: "Atlas - the beauty review community",
   defaultDescription:
-    "Your ultimate beauty app. Find salons you can trust. See where your friends are visiting and loving, so you can book your next appointment with confidence.",
-  url: "https://bellaapp.au",
-  ogImage: "/assets/og-image.jpg",
+    "Atlas is a community for honest beauty reviews. React, save and collect product and brand recommendations from a community you can trust.",
+  url: "https://atlasapp.au",
+  ogImage: "/assets/img/atlas-logo.png",
 };
 
 async function loadPartials() {
@@ -90,21 +90,19 @@ async function buildPage(relPath, partials) {
   const { meta, body } = parseDirective(src);
 
   const title = meta.title
-    ? `${meta.title} · Bella App`
+    ? `${meta.title} · Atlas`
     : SITE.defaultTitle;
   const description = meta.description ?? SITE.defaultDescription;
   const canonical = meta.path
     ? `${SITE.url}${meta.path}`
     : `${SITE.url}/${relPath.replace(/index\.html$/, "").replace(/\.html$/, "")}`;
   const active = meta.active ?? "";
-  const audience = meta.audience ?? "consumer"; // "consumer" | "business"
 
   const vars = {
     title,
     description,
     canonical,
     active,
-    audience,
     siteUrl: SITE.url,
     ogImage: SITE.ogImage,
     year: String(new Date().getFullYear()),

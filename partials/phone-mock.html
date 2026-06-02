@@ -1,0 +1,85 @@
+<!-- Atlas phone hero. Real app-screen export as base, animated overlays
+     using FloatingDiscovery's rotation angles + two-wave entrance. Sizes
+     and x/y values are bumped from the app's exact figures so items
+     "spill" past the phone bezel for a livelier hero. -->
+<div class="relative mx-auto w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[440px]">
+
+  <!-- Base screenshot (phone bezel + chrome) -->
+  <img
+    src="/assets/img/atlas-demo-base.png"
+    alt="Atlas app - searching product and brand reviews"
+    class="block w-full h-auto select-none"
+    loading="eager"
+    fetchpriority="high"
+    draggable="false"
+  />
+
+  <!-- Overlay aligned to the phone's discovery area. overflow:visible (default)
+       so wider pills and edge products can spill past the bezel. -->
+  <div class="absolute left-[22%] right-[22%] top-[26%] bottom-[14%]">
+
+    <!-- WAVE 1 - Rhode trio -->
+    <!-- rhode peptide lip balm - back inside, upper-left -->
+    <div class="absolute float-item float-wave-1 w-[26%]" style="left: 16%; top: 4%; --rot: -6deg; --bob-dur: 3.6s;">
+      <div class="bg-white border border-line rounded-xl p-1 overflow-hidden aspect-square shadow-[0_4px_12px_-3px_rgba(0,0,0,0.08)] flex items-center justify-center">
+        <img src="/assets/img/rhode-lipbalm.png" alt="" draggable="false" class="block max-w-full max-h-full object-contain object-center rounded-lg" />
+      </div>
+    </div>
+
+    <!-- rhode blush - right of centre -->
+    <div class="absolute float-item float-wave-1 w-[26%]" style="left: 58%; top: 52%; --rot: 6deg; --bob-dur: 4.8s;">
+      <div class="bg-white border border-line rounded-xl p-1 overflow-hidden aspect-square shadow-[0_4px_12px_-3px_rgba(0,0,0,0.08)] flex items-center justify-center">
+        <img src="/assets/img/rhode-blush.png" alt="" draggable="false" class="block max-w-full max-h-full object-contain object-center rounded-lg" />
+      </div>
+    </div>
+
+    <!-- Rhode Talk pill - lower-right, pushed past the bezel -->
+    <div class="absolute float-item float-wave-1" style="left: 52%; top: 76%; --rot: 3deg; --bob-dur: 4.5s;">
+      <div class="inline-flex w-max items-center bg-white border border-line rounded-[22px] p-1 pr-4 sm:pr-5 shadow-[0_6px_20px_-4px_rgba(0,0,0,0.10)]">
+        <img src="/assets/img/rhode-logo.jpg" alt="" draggable="false" class="size-8 sm:size-9 rounded-2xl object-cover shrink-0" />
+        <div class="pl-2.5 flex flex-col leading-tight">
+          <div class="flex items-baseline whitespace-nowrap">
+            <span class="text-[11px] sm:text-[12px] text-ink font-light">Rhode Talk</span><span class="text-[11px] sm:text-[12px] text-mute font-light">, Australia</span>
+          </div>
+          <span class="text-[9px] sm:text-[10px] text-mute font-light mt-0.5 whitespace-nowrap">6,040 Users</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- WAVE 2 - everything else -->
+    <!-- clinique moisturiser - upper-right, inside -->
+    <div class="absolute float-item float-wave-2 w-[24%]" style="left: 64%; top: 8%; --rot: 4deg; --bob-dur: 4.0s;">
+      <div class="bg-white border border-line rounded-xl p-1 overflow-hidden aspect-square shadow-[0_4px_12px_-3px_rgba(0,0,0,0.08)] flex items-center justify-center">
+        <img src="/assets/img/clinique-bottle.png" alt="" draggable="false" class="block max-w-full max-h-full object-contain object-center rounded-lg" />
+      </div>
+    </div>
+
+    <!-- charlotte tilbury - spills past LEFT bezel -->
+    <div class="absolute float-item float-wave-2 w-[26%]" style="left: -12%; top: 32%; --rot: -3deg; --bob-dur: 4.4s;">
+      <div class="bg-white border border-line rounded-xl p-1 overflow-hidden aspect-square shadow-[0_4px_12px_-3px_rgba(0,0,0,0.08)] flex items-center justify-center">
+        <img src="/assets/img/charlotte-tilbury.png" alt="" draggable="false" class="block max-w-full max-h-full object-contain object-center rounded-lg" />
+      </div>
+    </div>
+
+    <!-- Mecca Talk pill - upper-middle, extends right past bezel naturally -->
+    <div class="absolute float-item float-wave-2" style="left: 32%; top: 28%; --rot: -2deg; --bob-dur: 3.9s;">
+      <div class="inline-flex w-max items-center bg-white border border-line rounded-[22px] p-1 pr-4 sm:pr-5 shadow-[0_6px_20px_-4px_rgba(0,0,0,0.10)]">
+        <img src="/assets/img/mecca-logo.jpeg" alt="" draggable="false" class="size-8 sm:size-9 rounded-2xl object-cover shrink-0" />
+        <div class="pl-2.5 flex flex-col leading-tight">
+          <div class="flex items-baseline whitespace-nowrap">
+            <span class="text-[11px] sm:text-[12px] text-ink font-light">Mecca Talk</span><span class="text-[11px] sm:text-[12px] text-mute font-light">, Australia</span>
+          </div>
+          <span class="text-[9px] sm:text-[10px] text-mute font-light mt-0.5 whitespace-nowrap">35,300 Users</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- laura mercier - lower left, inside -->
+    <div class="absolute float-item float-wave-2 w-[22%]" style="left: 8%; top: 64%; --rot: 2deg; --bob-dur: 5.2s;">
+      <div class="bg-white border border-line rounded-xl p-1 overflow-hidden aspect-square shadow-[0_4px_12px_-3px_rgba(0,0,0,0.08)] flex items-center justify-center">
+        <img src="/assets/img/laura-mercier.png" alt="" draggable="false" class="block max-w-full max-h-full object-contain object-center rounded-lg" />
+      </div>
+    </div>
+
+  </div>
+</div>
