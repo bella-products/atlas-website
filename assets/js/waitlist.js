@@ -26,7 +26,7 @@ if (form) {
       errorEl.textContent = "";
       errorEl.classList.add("hidden");
     }
-    if (emailInput) emailInput.classList.remove("border-cherry", "focus:border-cherry");
+    if (emailInput) emailInput.classList.remove("border-accent-pink!", "focus:border-accent-pink!");
   };
 
   const showError = (msg) => {
@@ -34,7 +34,7 @@ if (form) {
       errorEl.textContent = msg;
       errorEl.classList.remove("hidden");
     }
-    if (emailInput) emailInput.classList.add("border-cherry", "focus:border-cherry");
+    if (emailInput) emailInput.classList.add("border-accent-pink!", "focus:border-accent-pink!");
   };
 
   form.addEventListener("submit", async (e) => {
