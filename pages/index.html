@@ -19,37 +19,13 @@
           </h1>
 
           <p style="--reveal-delay: 0.2s" class="mt-4 text-[16px] sm:text-[17px] leading-snug text-mute">
-            your guide to beauty • join the waitlist
+            your guide to beauty • join now
           </p>
 
-          <!-- Early-access waitlist (posts to atlas-website-api /waitlist via waitlist.js).
-               The App Store + Play Store badges that lived here are kept in
-               partials/store-badges.html — include that partial again to bring them back. -->
-          <div style="--reveal-delay: 0.3s" class="mt-8">
-            <form data-waitlist-form class="mx-auto lg:mx-0 max-w-md" novalidate>
-              <div class="flex flex-col sm:flex-row gap-3">
-                <input name="email" type="email" required autocomplete="email" aria-label="Email address" placeholder="you@example.com" class="h-12 min-h-12 w-full shrink-0 sm:flex-1 rounded-xl border border-line bg-white px-4 text-[15px] text-ink placeholder:text-mute-soft transition-colors focus:border-ink/40 focus:outline-none focus:ring-2 focus:ring-ink/10" />
-                <button data-submit type="submit" class="group inline-flex h-12 shrink-0 items-center justify-center gap-2 rounded-2xl border border-line bg-white px-6 text-[15px] font-medium text-ink transition-all duration-300 ease-out will-change-transform hover:-translate-y-[1px] hover:border-line-strong hover:shadow-[0_8px_24px_-12px_rgba(0,0,0,0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink/15 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50">
-                  <span data-label-idle class="inline-flex items-center gap-2">Get early access</span>
-                  <span data-label-loading class="hidden inline-flex items-center gap-2">
-                    <span class="spinner"></span>
-                    Joining&hellip;
-                  </span>
-                </button>
-              </div>
-
-              <p data-form-error class="hidden mt-2 text-left text-sm text-accent-pink"></p>
-            </form>
-
-            <div data-waitlist-success class="hidden flex items-start gap-3 rounded-2xl border border-line bg-surface-muted px-5 py-4 text-left">
-              <span class="flex size-8 shrink-0 items-center justify-center rounded-full bg-[#1A1A1A] text-white">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              <div>
-                <p class="text-[15px] text-ink">You're on the list.</p>
-                <p class="mt-1 text-[15px] text-ink">In the meantime, follow <a href="https://www.tiktok.com/@join_atlas" target="_blank" rel="noopener noreferrer" class="underline-offset-4 hover:underline">@join_atlas</a></p>
-              </div>
-            </div>
+          <!-- Store download buttons: App Store listing is live; Play Store routes to
+               the /playstore waitlist. Markup lives in partials/store-badges.html. -->
+          <div style="--reveal-delay: 0.3s" class="mt-8 flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-3">
+            {{> store-badges}}
           </div>
         </div>
 
@@ -65,7 +41,5 @@
     </div>
   </div>
 </section>
-
-<script type="module" src="/assets/js/waitlist.js"></script>
 
 {{> layout-end}}
