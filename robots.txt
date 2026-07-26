@@ -2,5 +2,5 @@ User-agent: *
 Allow: /
 Disallow: /playstore
 
-Sitemap: https://atlasapp.au/sitemap.xml
-Host: https://atlasapp.au
+Sitemap: https://atlasbeauty.au/sitemap.xml
+Host: https://atlasbeauty.au

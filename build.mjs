@@ -26,7 +26,7 @@ const SITE = {
   defaultTitle: "Atlas - the beauty review community",
   defaultDescription:
     "Atlas is a community for honest beauty reviews. React, save and collect product and brand recommendations from a community you can trust.",
-  url: "https://atlasapp.au",
+  url: "https://atlasbeauty.au",
   ogImage: "/assets/img/atlas-logo.png",
 };
 
